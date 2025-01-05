@@ -66,6 +66,12 @@
 			<artifactId>mysql-connector-java-8.0.26</artifactId>
 			<version>8.0.26</version>
 		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.modules</groupId>
+			<artifactId>mule-secure-configuration-property-module</artifactId>
+			<version>1.2.7</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
 	</dependencies>
 
 	<repositories>
