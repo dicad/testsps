@@ -4,7 +4,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>testsps</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>testsps</name>
@@ -36,6 +36,7 @@
 							<artifactId>mysql-connector-java-8.0.26</artifactId>
 						</sharedLibrary>
 					</sharedLibraries>
+					<classifier>---- select project type ----</classifier>
 				</configuration>
 			</plugin>
 		</plugins>
