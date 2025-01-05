@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd 
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="019ff0b8-9e82-4d4f-b958-8c9632ba30bd" >
+		<http:listener-connection host="${http.listener.host}" port="${http.listener.port}" />
+	</http:listener-config>
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="f4725690-ae9e-46ca-85db-4fe19bbdefda" >
+		<db:my-sql-connection host="mudb.learn.mulesoft.com" port="3306" user="${db.connetion.username}" password="${db.connetion.password}" database="training" />
+	</db:config>
+	<configuration-properties doc:name="Configuration properties" doc:id="b9c6444c-13b3-4b8c-8b3f-3247a24743a5" file="${env}.properties" />
+	<global-property doc:name="Global Property" doc:id="8bde2ad1-7a4c-4405-ae19-e403be8af911" name="env" value="local" />
+
+
+</mule>
